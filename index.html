@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel Iklan Indonesia</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f1f5f9;color:#172033}
+header{text-align:center;background:#14213d;color:white;padding:28px 12px}
+main{max-width:700px;margin:20px auto;padding:12px}
+.card{background:white;padding:18px;margin-bottom:16px;border-radius:12px}
+.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:3px}
+.pixel{aspect-ratio:1;background:#bfdbfe;border:1px solid #93c5fd;display:grid;place-items:center;font-size:10px}
+.pixel:nth-child(3n){background:#fde68a}
+.pixel:nth-child(4n){background:#bbf7d0}
+.pixel:nth-child(5n){background:#fbcfe8}
+a.btn{display:block;background:#16a34a;color:white;text-align:center;padding:14px;border-radius:8px;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+<h1>PIXEL IKLAN INDONESIA</h1>
+<p>Tempat promosi bisnis dan produkmu!</p>
+</header>
+<main>
+<section class="card">
+<h2>Pasang Iklanmu</h2>
+<p>Promosikan bisnis, toko, atau produkmu di sini.</p>
+<h3>Rp1.000 per unit</h3>
+<p>1 unit berukuran 10 × 10 piksel.</p>
+</section>
+<section class="card">
+<h2>Area Iklan</h2>
+<p>Contoh kotak-kotak iklan:</p>
+<div class="grid" id="grid"></div>
+</section>
+<section class="card">
+<h2>Ingin memasang iklan?</h2>
+<p>Hubungi pengelola untuk informasi pemesanan.</p>
+<a class="btn" href="mailto:EMAIL_KAMU@example.com">Hubungi Pengelola</a>
+</section>
+</main>
+<script>
+const grid=document.getElementById("grid");
+for(let i=1;i<=100;i++){
+const p=document.createElement("div");
+p.className="pixel";
+p.textContent=i;
+grid.appendChild(p);
+}
+</script>
+</body>
+</html>
